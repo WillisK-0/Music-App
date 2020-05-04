@@ -29,6 +29,7 @@ searchButton.addEventListener("click", function () {
     .then(results => results.json())
     .then(artistInfo => {
         console.log(artistInfo)
+        
     })
 
 
