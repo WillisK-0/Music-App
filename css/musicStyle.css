@@ -4,6 +4,13 @@ body {
 
 }
 
+
+
+header {
+    position: fixed;
+    top:0px;
+}
+
 #artist{
     width:50%;
     height: fit-content;
@@ -11,6 +18,7 @@ body {
 
 ul {
     list-style-position: inside;
+
 }
 
 #searchDiv {
@@ -37,10 +45,15 @@ ul {
 }
 
 #trackInfo{
+    margin-top: 311px;
     background-color: #ffffffd9;
 
 }
+
+
+
 
 #artist {
     background-color: #ffffffd9;
 }
+
