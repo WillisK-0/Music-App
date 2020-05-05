@@ -4,6 +4,15 @@ body {
 
 }
 
+#artist{
+    width:50%;
+    height: fit-content;
+}
+
+ul {
+    list-style-position: inside;
+}
+
 #searchDiv {
     background-color: #ffffffd9;
     padding:10px;
@@ -30,4 +39,8 @@ body {
 #trackInfo{
     background-color: #ffffffd9;
 
+}
+
+#artist {
+    background-color: #ffffffd9;
 }
