@@ -5,9 +5,9 @@ let trackInfo = document.getElementById("trackInfo")
 let trackDiv = document.getElementById("trackDiv")
 let artist = document.getElementById("artist")
 // f86b06c5332c847e2a02380f28826dc2  <--- This is the API key for last.fm
-
-
-searchButton.addEventListener("click", function () {
+    
+const searchQuery = () => {
+    
     let trackName = trackBox.value
     let artistName = artistBox.value
 
@@ -45,11 +45,13 @@ searchButton.addEventListener("click", function () {
         .then(song => {
             let item = `<p>${song.lyrics}</p>`
             trackInfo.innerHTML = item
-        })
-
-    
-
-
-
-
+    })
+}
+trackBox.focus();
+searchButton.addEventListener("click", searchQuery)
+artistBox.addEventListener("keyup", function(e) {
+    e.preventDefault()
+    if(e.keyCode == 13) {
+        searchButton.click()
+    }
 })
