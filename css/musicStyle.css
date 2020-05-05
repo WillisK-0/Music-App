@@ -5,7 +5,29 @@ body {
 }
 
 #searchDiv {
-    background-color: #d0d0d0;
-    width:50%;
-    height: max-content;
+    background-color: #ffffffd9;
+    padding:10px;
+    margin-left: 5px;
+    margin-top:10px;
+    width:fit-content;
+    height: fit-content;
+}
+
+#searchDiv div{
+    margin-left: 165px;
+    margin-top:-48px;
+}
+#searchDiv h1{
+    margin-top: auto;
+    color:black;
+}
+
+#trackDiv{
+    background-color: #ffffffd9;
+    width: fit-content;
+}
+
+#trackInfo{
+    background-color: #ffffffd9;
+
 }
