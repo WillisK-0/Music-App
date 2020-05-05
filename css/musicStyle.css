@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/55d78881e4b04ec82cf294e6/1440195939515-DILY5CL6KPFTBCRDO4LT/ke17ZwdGBToddI8pDm48kE9Zj5mg6Mg_N3phQ-vWKWd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UW97e8pyannjp5jHnmBNrcMFwKWub45TR0FMbBEuKTK78AR2UrAfKi4lRFuXqb7ntQ/06.jpg?format=2500w");
+
+
+}
+
+#searchDiv {
+    background-color: #ffffffd9;
+    padding:10px;
+    margin-left: 5px;
+    margin-top:10px;
+    width:fit-content;
+    height: fit-content;
+}
+
+#searchDiv div{
+    margin-left: 165px;
+    margin-top:-48px;
+}
+#searchDiv h1{
+    margin-top: auto;
+    color:black;
+}
+
+#trackDiv{
+    background-color: #ffffffd9;
+    width: fit-content;
+}
+
+#trackInfo{
+    background-color: #ffffffd9;
+
+}
