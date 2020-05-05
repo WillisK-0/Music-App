@@ -4,6 +4,13 @@ body {
 
 }
 
+
+header {
+    position: fixed;
+    top:0px;
+
+}
+
 #searchDiv {
     background-color: #ffffffd9;
     padding:10px;
@@ -28,6 +35,9 @@ body {
 }
 
 #trackInfo{
+    margin-top: 311px;
     background-color: #ffffffd9;
 
 }
+
+
