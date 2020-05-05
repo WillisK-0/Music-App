@@ -5,9 +5,19 @@ body {
 }
 
 
+
 header {
     position: fixed;
     top:0px;
+}
+
+#artist{
+    width:50%;
+    height: fit-content;
+}
+
+ul {
+    list-style-position: inside;
 
 }
 
@@ -40,4 +50,10 @@ header {
 
 }
 
+
+
+
+#artist {
+    background-color: #ffffffd9;
+}
 
