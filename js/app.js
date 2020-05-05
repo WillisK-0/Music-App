@@ -15,7 +15,7 @@ const searchQuery = () => {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
+            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}" target="_blank">${trackAbout.track.artist.name}</a></h2>`
             trackDiv.innerHTML = head
             return fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`)
             
