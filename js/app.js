@@ -14,9 +14,10 @@ searchButton.addEventListener("click", function () {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-            console.log(trackAbout.track.album.image)
+
             let head = `<h2>${trackAbout.track.name}</h2>
-                        <h1>Album: ${trackAbout.track.album.title}</h1>`
+                        <h1>Album: ${trackAbout.track.album.title}</h1>
+                        <img src='${trackAbout.track.album.image[2]["#text"]}'>`
             trackDiv.innerHTML = head
 
         })
