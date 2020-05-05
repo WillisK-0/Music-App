@@ -3,6 +3,7 @@ let artistBox = document.getElementById("artistBox")
 let searchButton = document.getElementById("searchButton")
 let trackInfo = document.getElementById("trackInfo")
 let trackDiv = document.getElementById("trackDiv")
+let artist = document.getElementById("artist")
 // f86b06c5332c847e2a02380f28826dc2  <--- This is the API key for last.fm
 
 
@@ -15,8 +16,8 @@ searchButton.addEventListener("click", function () {
         .then(trackAbout => {
             console.log(trackAbout)
 
-            let head = `<h2>${trackAbout.track.name}</h2>
-                        <h1>Album: ${trackAbout.track.album.title}</h1>
+            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>
+                        <h2>Album: ${trackAbout.track.album.title}</h2>
                         <img src='${trackAbout.track.album.image[2]["#text"]}'>`
             trackDiv.innerHTML = head
 
@@ -34,6 +35,9 @@ searchButton.addEventListener("click", function () {
         .then(results => results.json())
         .then(artistInfo => {
             console.log(artistInfo)
+            let artistItem = ``
+
+            artist.innerHTML = artistItem 
 
         })
 
