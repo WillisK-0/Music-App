@@ -104,6 +104,13 @@ pre{
 
 @media only screen and (min-width:50px) and (max-width:650px) {
     
+    #rapper{
+        font-family: 'Righteous', cursive;
+        color: azure;
+        position: absolute;
+        top:0px;
+    }
+
     img{
         display: block;
         margin-left: auto;
@@ -118,6 +125,7 @@ pre{
     ul {
         list-style-position: inside;
         text-align: center;
+        margin-right:45px;
     
     }
     
