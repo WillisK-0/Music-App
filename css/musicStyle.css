@@ -22,23 +22,18 @@ body {
 
 
 
-#artist{
-    width:50%;
-    height: fit-content;
+pre{
+    white-space: pre-wrap;
 }
 
-ul {
-    list-style-position: inside;
 
-}
 
 #searchDiv {
     color: azure;
     padding:10px;
     margin-left: 5px;
     margin-top:10px;
-    width:fit-content;
-    height: fit-content;
+   
 }
 
 #searchDiv div{
@@ -54,7 +49,7 @@ ul {
 #trackDiv{
     color: azure;
     margin-top: 60px;
-    width: fit-content;
+    
 }
 
 #trackInfo{
@@ -64,11 +59,7 @@ ul {
 }
 
 
-#main {
-    background-color: #ffffffd9;
-    height: 500px;
-    width:500px;
-}
+
 #artist {
     color: azure;
     
@@ -111,7 +102,30 @@ ul {
 
 /* mobile responsive  */
 
-@media only screen and (min-width:320px) and (max-width:480px) {
+@media only screen and (min-width:50px) and (max-width:650px) {
+    
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    pre{
+        white-space: pre-wrap;
+    }
+    
+    ul {
+        list-style-position: inside;
+        text-align: center;
+    
+    }
+    
+    h2{
+        text-align: center;
+    }
+    
+    
     #trackbox{
     margin-left: -154px;
     margin-top: 30px;
@@ -121,29 +135,18 @@ ul {
         text-align: center;
     }
 
-    #trackDiv{
-        margin-top: 111px;
-        margin-right: auto;
-        margin-left: auto;    
+    
+    #wrapper{
+        margin-top: 100px;
+    }
+    
+    #songList{
+        margin-left: 5px;
     }
 
-    #artist{
-        width:fit-content;
-        margin-left: auto;
-        margin-right:auto;
+    #lyricDiv{
+        margin-top: 60px;
     }
-    #trackInfo{
-        position: absolute;
-    }
-
-    #artist {
-        align-items: center;
-    }
-
-    /* #artist img {
-        margin-right:auto;
-        margin-left:auto;
-    } */
 
 }
 

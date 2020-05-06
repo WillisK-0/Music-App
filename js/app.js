@@ -30,11 +30,13 @@ const searchQuery = () => {
                         
             })
             
-            let z = `<h2>${albumInfo.album.name}</h2>
+            let z = `
                     <img src = "${albumInfo.album.image[2]["#text"]}">
-                     <ul style="list-style-type:none">
+                    <h2>${albumInfo.album.name}</h2>
+                    <div id="songList"> 
+                    <ul style="list-style-type:none">
                     ${liItem.join('')}
-                     </ul>`
+                     </ul></div>`
             artist.innerHTML = z
 
         })
