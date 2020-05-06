@@ -64,10 +64,89 @@ ul {
 }
 
 
-
-
+#main {
+    background-color: #ffffffd9;
+    height: 500px;
+    width:500px;
+}
 #artist {
     color: azure;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile responsive  */
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    #trackbox{
+    margin-left: -154px;
+    margin-top: 30px;
+    }
+
+    #searchDiv{
+        text-align: center;
+    }
+
+    #trackDiv{
+        margin-top: 111px;
+        margin-right: auto;
+        margin-left: auto;    
+    }
+
+    #artist{
+        width:fit-content;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    #trackInfo{
+        position: absolute;
+    }
+
+    #artist {
+        align-items: center;
+    }
+
+    /* #artist img {
+        margin-right:auto;
+        margin-left:auto;
+    } */
+
+}
+
+
+
 
