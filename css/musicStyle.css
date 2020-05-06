@@ -40,12 +40,13 @@ ul {
 }
 
 #trackDiv{
+    margin-top: 60px;
     background-color: #ffffffd9;
     width: fit-content;
 }
 
 #trackInfo{
-    margin-top: 311px;
+   
     background-color: #ffffffd9;
 
 }
@@ -54,6 +55,7 @@ ul {
 
 
 #artist {
+    
     background-color: #ffffffd9;
 }
 
