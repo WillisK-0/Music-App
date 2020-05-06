@@ -1,15 +1,24 @@
 body {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/55d78881e4b04ec82cf294e6/1440195939515-DILY5CL6KPFTBCRDO4LT/ke17ZwdGBToddI8pDm48kE9Zj5mg6Mg_N3phQ-vWKWd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UW97e8pyannjp5jHnmBNrcMFwKWub45TR0FMbBEuKTK78AR2UrAfKi4lRFuXqb7ntQ/06.jpg?format=2500w");
+   background-image: linear-gradient(to bottom right, black, grey, blue);
     
 
 }
+h2 {
+    font-family: 'Righteous', cursive;
+}
 
 #trackBox {
+    font-family: 'Righteous', cursive;
     opacity: 1;
     border-radius: 131px;
 }
 
+#searchButton {
+    font-family: 'Righteous', cursive;
+}
+
 #artistBox {
+    font-family: 'Righteous', cursive;
     border-radius: 131px;
 }
 
