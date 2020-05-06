@@ -4,12 +4,23 @@ body {
 
 }
 
+#trackBox {
+    opacity: 1;
+    border-radius: 131px;
+}
 
+#artistBox {
+    border-radius: 131px;
+}
 
 #rapper {
+    font-family: 'Righteous', cursive;
+    color: azure;
     position: fixed;
     top:0px;
 }
+
+
 
 #artist{
     width:50%;
@@ -22,7 +33,7 @@ ul {
 }
 
 #searchDiv {
-    background-color: #ffffffd9;
+    color: azure;
     padding:10px;
     margin-left: 5px;
     margin-top:10px;
@@ -31,23 +42,24 @@ ul {
 }
 
 #searchDiv div{
+    color: azure;
     margin-left: 165px;
     margin-top:-48px;
 }
 #searchDiv h1{
     margin-top: auto;
-    color:black;
+    color:azure;
 }
 
 #trackDiv{
+    color: azure;
     margin-top: 60px;
-    background-color: #ffffffd9;
     width: fit-content;
 }
 
 #trackInfo{
-   
-    background-color: #ffffffd9;
+    font-family: 'Righteous', cursive;
+    color: azure;
 
 }
 
@@ -55,7 +67,7 @@ ul {
 
 
 #artist {
+    color: azure;
     
-    background-color: #ffffffd9;
 }
 
