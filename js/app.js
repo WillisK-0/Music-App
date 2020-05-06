@@ -30,11 +30,14 @@ searchButton.addEventListener("click", function () {
                         
             })
             
-            let z = `<h2>${albumInfo.album.name}</h2>
+            let z = `
                     <img src = "${albumInfo.album.image[2]["#text"]}">
+
+                    <h2>${albumInfo.album.name}</h2>
+                    <div id="songList"> 
                      <ul style="list-style-type:decimal">
                     ${liItem.join('')}
-                     </ul>`
+                     </ul></div>`
             artist.innerHTML = z
 
         })
