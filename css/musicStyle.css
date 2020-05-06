@@ -1,15 +1,24 @@
 body {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/55d78881e4b04ec82cf294e6/1440195939515-DILY5CL6KPFTBCRDO4LT/ke17ZwdGBToddI8pDm48kE9Zj5mg6Mg_N3phQ-vWKWd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UW97e8pyannjp5jHnmBNrcMFwKWub45TR0FMbBEuKTK78AR2UrAfKi4lRFuXqb7ntQ/06.jpg?format=2500w");
+   background-image: linear-gradient(to bottom right, black, grey, blue);
     
 
 }
+h2 {
+    font-family: 'Righteous', cursive;
+}
 
 #trackBox {
+    font-family: 'Righteous', cursive;
     opacity: 1;
     border-radius: 131px;
 }
 
+#searchButton {
+    font-family: 'Righteous', cursive;
+}
+
 #artistBox {
+    font-family: 'Righteous', cursive;
     border-radius: 131px;
 }
 
@@ -22,23 +31,18 @@ body {
 
 
 
-#artist{
-    width:50%;
-    height: fit-content;
+pre{
+    white-space: pre-wrap;
 }
 
-ul {
-    list-style-position: inside;
 
-}
 
 #searchDiv {
     color: azure;
     padding:10px;
     margin-left: 5px;
     margin-top:10px;
-    width:fit-content;
-    height: fit-content;
+   
 }
 
 #searchDiv div{
@@ -54,7 +58,7 @@ ul {
 #trackDiv{
     color: azure;
     margin-top: 60px;
-    width: fit-content;
+    
 }
 
 #trackInfo{
@@ -64,11 +68,7 @@ ul {
 }
 
 
-#main {
-    background-color: #ffffffd9;
-    height: 500px;
-    width:500px;
-}
+
 #artist {
     color: azure;
     
@@ -111,7 +111,38 @@ ul {
 
 /* mobile responsive  */
 
-@media only screen and (min-width:320px) and (max-width:480px) {
+@media only screen and (min-width:50px) and (max-width:650px) {
+    
+    #rapper{
+        font-family: 'Righteous', cursive;
+        color: azure;
+        position: absolute;
+        top:0px;
+    }
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    pre{
+        white-space: pre-wrap;
+    }
+    
+    ul {
+        list-style-position: inside;
+        text-align: center;
+        margin-right:45px;
+    
+    }
+    
+    h2{
+        text-align: center;
+    }
+    
+    
     #trackbox{
     margin-left: -154px;
     margin-top: 30px;
@@ -121,29 +152,18 @@ ul {
         text-align: center;
     }
 
-    #trackDiv{
-        margin-top: 111px;
-        margin-right: auto;
-        margin-left: auto;    
+    
+    #wrapper{
+        margin-top: 100px;
+    }
+    
+    #songList{
+        margin-left: 5px;
     }
 
-    #artist{
-        width:fit-content;
-        margin-left: auto;
-        margin-right:auto;
+    #lyricDiv{
+        margin-top: 60px;
     }
-    #trackInfo{
-        position: absolute;
-    }
-
-    #artist {
-        align-items: center;
-    }
-
-    /* #artist img {
-        margin-right:auto;
-        margin-left:auto;
-    } */
 
 }
 

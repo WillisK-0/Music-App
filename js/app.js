@@ -5,9 +5,9 @@ let trackInfo = document.getElementById("trackInfo")
 let trackDiv = document.getElementById("trackDiv")
 let artist = document.getElementById("artist")
 // f86b06c5332c847e2a02380f28826dc2  <--- This is the API key for last.fm
-    
-const searchQuery = () => {
-    
+
+
+searchButton.addEventListener("click", function () {
     let trackName = trackBox.value
     let artistName = artistBox.value
 
@@ -15,7 +15,7 @@ const searchQuery = () => {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}" target="_blank">${trackAbout.track.artist.name}</a></h2>`
+            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
             trackDiv.innerHTML = head
             return fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`)
             
@@ -30,11 +30,14 @@ const searchQuery = () => {
                         
             })
             
-            let z = `<h2>${albumInfo.album.name}</h2>
+            let z = `
                     <img src = "${albumInfo.album.image[2]["#text"]}">
-                     <ul style="list-style-type:none">
+
+                    <h2>${albumInfo.album.name}</h2>
+                    <div id="songList"> 
+                     <ul style="list-style-type:decimal">
                     ${liItem.join('')}
-                     </ul>`
+                     </ul></div>`
             artist.innerHTML = z
 
         })
@@ -45,13 +48,19 @@ const searchQuery = () => {
         .then(song => {
             let item = `<p>${song.lyrics}</p>`
             trackInfo.innerHTML = item
-    })
-}
-trackBox.focus();
-searchButton.addEventListener("click", searchQuery)
-artistBox.addEventListener("keyup", function(e) {
-    e.preventDefault()
-    if(e.keyCode == 13) {
-        searchButton.click()
+        })
+
+    
+
+
+
+
+})
+    trackBox.focus();
+    searchButton.addEventListener("click", searchQuery)
+    artistBox.addEventListener("keyup", function(e) {
+        e.preventDefault()
+        if(e.keyCode == 13) {
+         searchButton.click()
     }
 })
