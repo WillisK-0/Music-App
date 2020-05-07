@@ -16,7 +16,7 @@ searchButton.addEventListener("click", function () {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
+            let head = `<h2>${trackAbout.track.name} - ${trackAbout.track.artist.name}</h2>`
             trackDiv.innerHTML = head
             return fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`)
 
@@ -38,7 +38,8 @@ searchButton.addEventListener("click", function () {
                     <div id="songList"> 
                      <ul style="list-style-type:decimal">
                     ${liItem.join('')}
-                     </ul></div>`
+                     </ul></div>
+                     <div><a href="${albumInfo.album.url}" id="moreInfoLink" target="_blank"><p>Click for more info</p></a></div>`
             artist.innerHTML = z
 
         })
