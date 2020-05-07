@@ -16,17 +16,9 @@ searchButton.addEventListener("click", function () {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            let head = `<h2>${trackAbout.track.name} - ${trackAbout.track.artist.name}</h2>`
-=======
-            let head = `<h2 style="text-align: center;">${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
->>>>>>> 99b2fdab017f2db5ef37933f3f9d39a0f4a7174a
-=======
 
             let head = `<h2>${trackAbout.track.name} - ${trackAbout.track.artist.name}</h2>`
 
->>>>>>> 564f505119898b47ae6dc64195a8a3c275826e94
             trackDiv.innerHTML = head
             return fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`)
 
@@ -43,7 +35,6 @@ searchButton.addEventListener("click", function () {
 
             let z = `
                     <img class= "column" src = "${albumInfo.album.image[2]["#text"]}">
-
                     <h2 class="column2">${albumInfo.album.name}</h2>
                     <div id="songList"> 
                      <ul class="column2" style="list-style-type:decimal">
