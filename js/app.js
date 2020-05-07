@@ -61,11 +61,11 @@ searchButton.addEventListener("click", function () {
 
 })
 }
-trackBox.focus();
-searchButton.addEventListener("click", searchQuery)
-artistBox.addEventListener("keyup", function (e) {
-    e.preventDefault()
-    if (e.keyCode == 13) {
+    trackBox.focus();
+    searchButton.addEventListener("click", searchQuery)
+    artistBox.addEventListener("keyup", function(e) {
+        e.preventDefault()
+        if (e.keyCode == 13) {
         searchButton.click()
     }
 })
