@@ -73,7 +73,27 @@ pre{
     color: azure;
     
 }
-
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.column2 {
+    float: right;
+    width: 30%;
+    padding: 10px;
+    margin-top: 0px;
+}
+.inner {
+    height: 200px;
+    display: table;
+    vertical-align: bottom;
+    margin-top: 50px;
+    width: 1000px;
+}
+.outer {
+    display: table;
+}
 
 
 
@@ -140,12 +160,6 @@ pre{
     
     h2{
         text-align: center;
-    }
-    
-    
-    #trackbox{
-    margin-left: -154px;
-    margin-top: 30px;
     }
 
     #searchDiv{
