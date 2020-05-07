@@ -16,7 +16,7 @@ searchButton.addEventListener("click", function () {
         .then(r => r.json())
         .then(trackAbout => {
             console.log(trackAbout)
-            let head = `<h2>${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
+            let head = `<h2 style="text-align: center;">${trackAbout.track.name} - <a href="${trackAbout.track.artist.url}">${trackAbout.track.artist.name}</a></h2>`
             trackDiv.innerHTML = head
             return fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`)
 
@@ -32,11 +32,11 @@ searchButton.addEventListener("click", function () {
             })
 
             let z = `
-                    <img src = "${albumInfo.album.image[2]["#text"]}">
+                    <img class= "column" src = "${albumInfo.album.image[2]["#text"]}">
 
-                    <h2>${albumInfo.album.name}</h2>
+                    <h2 class="column2">${albumInfo.album.name}</h2>
                     <div id="songList"> 
-                     <ul style="list-style-type:decimal">
+                     <ul class="column2" style="list-style-type:decimal">
                     ${liItem.join('')}
                      </ul></div>`
             artist.innerHTML = z
@@ -47,7 +47,7 @@ searchButton.addEventListener("click", function () {
     fetch(`https://api.lyrics.ovh/v1/${artistName}/${trackName}`)
         .then(response => response.json())
         .then(song => {
-            let item = `<p>${song.lyrics}</p>`
+            let item = `<p class="inner">${song.lyrics}</p>`
             trackInfo.innerHTML = item
         })
 
