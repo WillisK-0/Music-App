@@ -75,9 +75,25 @@ pre{
 
 #artist {
     color: azure;
-    
+    text-decoration: none;    
 }
-.column {
+a:link {
+    color: azure;
+    text-decoration: none;    
+}
+a:visited {
+    color: azure;
+    text-decoration: none;    
+}
+a:hover {
+    color: azure;
+    text-decoration: none;    
+}
+a:active {
+    color: azure;
+    text-decoration: none;    
+}
+/* .column {
     float: left;
     width: 50%;
     padding: 10px;
@@ -86,9 +102,9 @@ pre{
     float: right;
     width: 30%;
     padding: 10px;
-    margin-top: 0px;
-}
-.inner {
+    margin-top: 0px; 
+} */
+/* .inner {
     height: 200px;
     display: table;
     vertical-align: bottom;
@@ -97,7 +113,7 @@ pre{
 }
 .outer {
     display: table;
-}
+} */
 
 
 
@@ -148,7 +164,7 @@ pre{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 30%;
     }
 
     pre{
@@ -169,11 +185,9 @@ pre{
     #searchDiv{
         text-align: center;
     }
-
-    
-    #wrapper{
+    /* #wrapper{
         margin-top: 100px;
-    }
+    } */
     
     #songList{
         margin-left: 5px;
@@ -181,6 +195,27 @@ pre{
 
     #lyricDiv{
         margin-top: 60px;
+    }
+    body {
+        display: grid;
+        grid-gap: 1em;
+    }
+    #logo {
+        display: grid;
+        text-align: center;
+    }
+    #textBox {
+        display: grid;
+        text-align: center;
+    }
+    #moreInfoLink {
+        display: grid;
+        text-align: center;
+    }
+    #lyricDiv {
+        display: grid;
+        text-align: center;
+        margin-top: 5px;
     }
 
 }
