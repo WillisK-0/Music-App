@@ -75,7 +75,23 @@ pre{
 
 #artist {
     color: azure;
-    
+    text-decoration: none;    
+}
+a:link {
+    color: azure;
+    text-decoration: none;    
+}
+a:visited {
+    color: azure;
+    text-decoration: none;    
+}
+a:hover {
+    color: azure;
+    text-decoration: none;    
+}
+a:active {
+    color: azure;
+    text-decoration: none;    
 }
 /* .column {
     float: left;
