@@ -4,10 +4,14 @@ let searchButton = document.getElementById("searchButton")
 let trackInfo = document.getElementById("trackInfo")
 let trackDiv = document.getElementById("trackDiv")
 let artist = document.getElementById("artist")
+let albumArtDiv = document.getElementById("albumArtDiv")
+let moreInfo = document.getElementById('moreInfo')
 // f86b06c5332c847e2a02380f28826dc2  <--- This is the API key for last.fm
 
-const searchQuery = () => {
+const searchQuery = () =>{
 
+
+    
     let trackName = trackBox.value
     let artistName = artistBox.value
 
@@ -32,14 +36,17 @@ const searchQuery = () => {
 
             })
 
-            let z = `
-                    <img class= "column" src = "${albumInfo.album.image[2]["#text"]}">
-                    <h2 class="column2">${albumInfo.album.name}</h2>
+            let z = `<h2 class="column2">${albumInfo.album.name}</h2>
                     <div id="songList"> 
-                    <ul class="column2" style="list-style-type:decimal">
+                     <ul class="column2" style="list-style-type:decimal">
                     ${liItem.join('')}
-                    </ul></div>
-                    <div><a href="${albumInfo.album.url}" id="moreInfoLink" target="_blank"><p>Click for more info</p></a></div>`
+                     </ul></div>`
+
+            let y = `<img class= "column" src = "${albumInfo.album.image[4]["#text"]}">`
+
+            let x = `<a href="${albumInfo.album.url}" id="moreInfoLink" target="_blank"><p>Click for more info</p></a>`
+            moreInfo.innerHTML = x
+            albumArtDiv.innerHTML = y
             artist.innerHTML = z
 
         })
@@ -50,13 +57,17 @@ const searchQuery = () => {
         .then(song => {
             let item = `<p class="inner">${song.lyrics}</p>`
             trackInfo.innerHTML = item
-    })
+        })
+
+
+
 }
-trackBox.focus();
-searchButton.addEventListener("click", searchQuery)
-artistBox.addEventListener("keyup", function(e) {
-    e.preventDefault()
-    if (e.keyCode == 13) {
-    searchButton.click()
+
+    trackBox.focus();
+    searchButton.addEventListener("click", searchQuery)
+    artistBox.addEventListener("keyup", function(e) {
+        e.preventDefault()
+        if (e.keyCode == 13) {
+        searchButton.click()
     }
 })
