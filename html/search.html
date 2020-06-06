@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/musicStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navBar.css" />
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-wide.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- <div id="logo">
+      <h1>MusicWiki</h1>
+    </div> -->
+
+    <header class="main-header">
+      <div id="logo">
+        <h1>
+          MusicWiki
+          <span><img src="../images/music.png" id="musicIcon" /></span>
+        </h1>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="../index.html" class="main-nav__navLink">Home</a>
+          </li>
+
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__navLink">Search</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="textBox">
+        <input type="text" id="trackBox" placeholder="Enter song name" />
+        <input type="text" id="artistBox" placeholder="Enter artist name" />
+        <button id="searchButton">Search</button>
+      </div>
+      <div id="page" class="container">
+        <div class="row">
+          <!-- Sidebar -->
+          <div id="sidebar" class="4u">
+            <section>
+              <header class="major">
+                <div id="trackDiv"></div>
+              </header>
+              <div class="row half">
+                <section class="6u">
+                  <div id="albumArtDiv"></div>
+                  <div id="moreInfo"></div>
+                </section>
+                <section class="6u"></section>
+              </div>
+            </section>
+            <section>
+              <header class="major">
+                <div id="artistNameDiv"></div>
+              </header>
+            </section>
+          </div>
+
+          <!-- Content -->
+          <div id="content" class="8u skel-cell-important">
+            <section>
+              <header class="major">
+                <span class="byline"> <div id="artist"></div> </span>
+              </header>
+              <div id="lyricDiv">
+                <pre id="trackInfo" class="outer"></pre>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- /Page -->
+      <!-- <div id="textBox">
+        <input type="text" id="trackBox" placeholder="Enter song name" />
+        <input type="text" id="artistBox" placeholder="Enter artist name" />
+        <button id="searchButton">Search</button>
+      </div>
+
+      <div id="wrapper">
+        <div id="albumArtDiv"></div>
+        <div id="trackDiv"></div>
+        <div id="artist"></div>
+        <div id="moreInfo"></div>
+      </div>
+
+      <div id="lyricDiv">
+        <pre id="trackInfo" class="outer"></pre>
+      </div> -->
+      <script src="../js/app.js"></script>
+      <script src="../js/navBar.js"></script>
+    </main>
+  </body>
+</html>

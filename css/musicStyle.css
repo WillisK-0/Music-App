@@ -1,225 +1,121 @@
-
-
 body {
-   background-image: linear-gradient(to bottom right, black, grey,#0000ff59);
-   background-size: contain;
-   background-size:cover; 
-   background-repeat: no-repeat;
-   font-family: 'Righteous', cursive;
-   color: azure;
-   
-
-   
-
-}
-h2 {
-    font-family: 'Righteous', cursive;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  font-family: "Abril Fatface", cursive;
 }
 
-#trackBox {
-    font-family: 'Righteous', cursive;
-    opacity: 1;
-    border-radius: 131px;
+header {
+  font-family: "Abril Fatface", cursive;
+  color: #ffffff;
+}
+.leftside,
+.rightside {
+  height: 100%;
+  width: 100%;
 }
 
-#searchButton {
-    font-family: 'Righteous', cursive;
+.leftside {
+  background: #bcbcd04a;
+
+  background-size: cover;
 }
 
-#artistBox {
-    font-family: 'Righteous', cursive;
-    border-radius: 131px;
+.rightside {
+  background: #bcbcd04a;
+
+  background-size: cover;
 }
 
-
-
-
-
-pre{
-    white-space: pre-wrap;
+.right-container {
+  padding: 20px;
+  width: 90%;
 }
 
+.right-container > h2 {
+  text-align: center;
+}
 
+.main-section > h2 {
+  text-align: center;
+}
 
-#searchDiv {
+.right-side__ol {
+  list-style-type: decimal-leading-zero;
+}
+
+#albumsTitle {
+  margin-top: 3px;
+}
+
+#tracksTitle {
+  margin-top: -16px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 50px) and (max-width: 650px) {
+  #rapper {
+    font-family: "Righteous", cursive;
     color: azure;
-    padding:10px;
-    margin-left: 5px;
-    margin-top:10px;
-   
-}
+    position: absolute;
+    top: 0px;
+  }
 
-#searchDiv div{
-    color: azure;
-    margin-left: 165px;
-    margin-top:-48px;
-}
-#searchDiv h1{
-    margin-top: auto;
-    color:azure;
-}
-
-#trackDiv{
-    color: azure;
-    margin-top: 60px;
-    
-}
-
-#trackInfo{
-    font-family: 'Righteous', cursive;
-    color: azure;
-
-}
-
-
-
-#artist {
-    color: azure;
-    text-decoration: none;    
-}
-a:link {
-    color: azure;
-    text-decoration: none;    
-}
-a:visited {
-    color: azure;
-    text-decoration: none;    
-}
-a:hover {
-    color: azure;
-    text-decoration: none;    
-}
-a:active {
-    color: azure;
-    text-decoration: none;    
-}
-/* .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-.column2 {
-    float: right;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 30%;
-    padding: 10px;
-    margin-top: 0px; 
-} */
-/* .inner {
-    height: 200px;
-    display: table;
-    vertical-align: bottom;
-    margin-top: 50px;
-    width: 1000px;
-}
-.outer {
-    display: table;
-} */
+  }
 
+  pre {
+    white-space: pre-wrap;
+  }
 
+  ul {
+    list-style-position: inside;
+    text-align: center;
+    margin-right: 45px;
+  }
 
+  h2 {
+    text-align: center;
+  }
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* mobile responsive  */
-
-@media only screen and (min-width:50px) and (max-width:650px) {
-    
-    #rapper{
-        font-family: 'Righteous', cursive;
-        color: azure;
-        position: absolute;
-        top:0px;
-    }
-
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 30%;
-    }
-
-    pre{
-        white-space: pre-wrap;
-    }
-    
-    ul {
-        list-style-position: inside;
-        text-align: center;
-        margin-right:45px;
-    
-    }
-    
-    h2{
-        text-align: center;
-    }
-
-    #searchDiv{
-        text-align: center;
-    }
-    /* #wrapper{
+  #searchDiv {
+    text-align: center;
+  }
+  /* #wrapper{
         margin-top: 100px;
     } */
-    
-    #songList{
-        margin-left: 5px;
-    }
 
-    #lyricDiv{
-        margin-top: 60px;
-    }
-    body {
-        display: grid;
-        grid-gap: 1em;
-    }
-    #logo {
-        display: grid;
-        text-align: center;
-    }
-    #textBox {
-        display: grid;
-        text-align: center;
-    }
-    #moreInfoLink {
-        display: grid;
-        text-align: center;
-    }
-    #lyricDiv {
-        display: grid;
-        text-align: center;
-        margin-top: 5px;
-    }
+  #songList {
+    margin-left: 5px;
+  }
 
+  #lyricDiv {
+    margin-top: 60px;
+  }
+  body {
+    display: grid;
+    grid-gap: 1em;
+  }
+  #logo {
+    display: grid;
+    text-align: center;
+  }
+  #textBox {
+    display: grid;
+    text-align: center;
+  }
+  #moreInfoLink {
+    display: grid;
+    text-align: center;
+  }
+  #lyricDiv {
+    display: grid;
+    text-align: center;
+    margin-top: 5px;
+  }
 }
-
-
-
-

@@ -6,7 +6,35 @@ let trackDiv = document.getElementById("trackDiv");
 let artist = document.getElementById("artist");
 let albumArtDiv = document.getElementById("albumArtDiv");
 let moreInfo = document.getElementById("moreInfo");
+let albumSec = document.getElementById("albumSec");
+let trackList = document.getElementById("trackList");
+let artistNameDiv = document.getElementById("artistNameDiv");
 // f86b06c5332c847e2a02380f28826dc2  <--- This is the API key for last.fm
+
+// cliet id for spotify 0acbd973e6f3487d9515f8dcd7eb117d
+
+fetch(
+  `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=f86b06c5332c847e2a02380f28826dc2&format=json`
+)
+  .then((reply) => reply.json())
+  .then((topTracks) => {
+    console.log(topTracks);
+    let topTrackList = topTracks.tracks.track.map((track) => {
+      return `<li class="list-group-item>${track.name}- ${track.artist.name}</li>`;
+    });
+    trackList.innerHTML = topTrackList.join("");
+  });
+
+fetch(
+  `http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=pop&api_key=f86b06c5332c847e2a02380f28826dc2&format=json`
+)
+  .then((response1) => response1.json())
+  .then((album) => {
+    let output = album.albums.album.slice(0, 24).map((info) => {
+      return `<li><figure><img src='${info.image[2]["#text"]}' class="main-section__albumArt"></li>`;
+    });
+    albumSec.innerHTML = output.join("");
+  });
 
 const searchQuery = () => {
   let trackName = trackBox.value;
@@ -17,30 +45,28 @@ const searchQuery = () => {
   )
     .then((r) => r.json())
     .then((trackAbout) => {
-      console.log(trackAbout);
       if (trackAbout.error) {
         return console.log("error");
       } else {
-        let head = `<h2>${trackAbout.track.name} - ${trackAbout.track.artist.name}</h2>`;
+        let head = `<h2>${trackAbout.track.name} </h2>`;
+        let artistNameValue = `<h2>${trackAbout.track.artist.name}</h.`;
 
         trackDiv.innerHTML = head;
+        artistNameDiv.innerHTMl = artistNameValue;
         return fetch(
           `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=f86b06c5332c847e2a02380f28826dc2&artist=${artistName}&album=${trackAbout.track.album.title}&format=json`
         );
       }
     })
-
     .then((x) => x.json())
     .then((albumInfo) => {
-      console.log(albumInfo);
       songList = albumInfo.album.tracks.track;
-      console.log(songList);
       let liItem = songList.map((object) => {
         return `<li>${object.name}</li>`;
       });
 
       let z = `<h2 class="column2">${albumInfo.album.name}</h2>
-                        <div id="songList"> 
+                        <div id="songList">
                         <ul class="column2" style="list-style-type:decimal">
                         ${liItem.join("")}
                         </ul></div>`;
@@ -52,7 +78,7 @@ const searchQuery = () => {
       albumArtDiv.innerHTML = y;
       artist.innerHTML = z;
     });
-  // http://api.lololyrics.com/0.5/getLyric?artist=[ARTIST]&track=[TRACK TITLE]
+
   fetch(`https://api.audd.io/findLyrics/?q=${artistName}${trackName}`)
     .then((response) => response.json())
     .then((song) => {
